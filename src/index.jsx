@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const App = () => <h1>Tá funcioonando</h1>
+import Root from './modules/Root'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<Root />, document.getElementById('root'))

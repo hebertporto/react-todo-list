@@ -29,7 +29,7 @@ module.exports = {
         loader: 'eslint-loader',
       },
       {
-        test: /\.jsx$/,
+        test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
@@ -55,4 +55,8 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
   ],
+  resolve: {
+    modules: ['node_modules'],
+    extensions: ['.js', '.json', '.jsx', '.css'],
+  },
 }
