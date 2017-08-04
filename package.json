@@ -9,5 +9,9 @@
   },
   "repository": "https://github.com/hebertporto/react-todo-list.git",
   "author": "Hebert Porto <hebertporto@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  }
 }
