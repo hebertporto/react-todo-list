@@ -3,8 +3,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const VENDOR_LIBS = [
-  'faker', 'lodash', 'react', 'react-dom', 'react-input-range', 'react-redux', 'react-router',
-  'redux', 'redux-form', 'redux-thunk',
+  'react', 'react-dom',
 ]
 
 module.exports = {
@@ -30,11 +29,13 @@ module.exports = {
         loader: 'eslint-loader',
       },
       {
-        use: 'babel-loader',
         test: /\.jsx$/,
-        exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react', 'stage-3'],
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015', 'react', 'stage-3'],
+          },
         },
       },
       {

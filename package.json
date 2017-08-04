@@ -5,7 +5,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "build": "yarn run clean && webpack",
-    "serve": "webpack-dev-server"
+    "dev": "webpack-dev-server"
   },
   "repository": "https://github.com/hebertporto/react-todo-list.git",
   "author": "Hebert Porto <hebertporto@gmail.com>",
