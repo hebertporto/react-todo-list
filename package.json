@@ -1,0 +1,13 @@
+{
+  "name": "react-todo-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "yarn run clean && webpack",
+    "serve": "webpack-dev-server"
+  },
+  "repository": "https://github.com/hebertporto/react-todo-list.git",
+  "author": "Hebert Porto <hebertporto@gmail.com>",
+  "license": "MIT"
+}
