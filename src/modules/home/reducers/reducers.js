@@ -1,5 +1,4 @@
 export function getInfo(state, { payload }) {
-  console.log('paylaod getInfo', payload)
   return { ...state, info: payload }
 }
 

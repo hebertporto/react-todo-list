@@ -11,7 +11,11 @@ function sendInfo(payload) {
 
 export function fetchInfo() {
   console.log('fetch info')
-  return dispatch => dispatch(sendInfo('cheguei direto da actions'))
+  const payload = 'cheguei direto da action'
+  return {
+    type: HOME_INFO,
+    payload,
+  }
 }
 
 export function fetchInfo2() {

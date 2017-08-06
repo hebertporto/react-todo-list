@@ -8,12 +8,7 @@ import { fetchInfo } from './../actions/'
 class Home extends Component {
 
   componentWillMount() {
-    console.log('componentWillMount')
     this.props.fetchInfo()
-  }
-
-  componentWillReceiveProps(nextProps) {
-    console.log(nextProps)
   }
 
   render() {
@@ -21,7 +16,6 @@ class Home extends Component {
       <div>
         <h1> Component Home Redux</h1>
         <h1>{this.props.home.info}</h1>
-
       </div>
     )
   }
@@ -35,5 +29,9 @@ const mapStateToProps = state => ({
   home: state.home,
 })
 
-const mapDispatchToProps = () => ({ fetchInfo })
+const mapDispatchToProps = (dispatch) => {
+  return {
+    fetchInfo: () => dispatch(fetchInfo()),
+  }
+}
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
