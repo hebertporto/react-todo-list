@@ -13,7 +13,7 @@ import Home from './modules/home/containers/Home'
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__
       && window.__REDUX_DEVTOOLS_EXTENSION__()
 
-const store = applyMiddleware()(createStore)(reducers, thunk, devTools)
+const store = applyMiddleware(thunk)(createStore)(reducers, devTools)
 
 ReactDOM.render(
   <Provider store={store}>
