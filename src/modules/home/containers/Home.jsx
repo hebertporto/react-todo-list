@@ -5,6 +5,8 @@ import { connect } from 'react-redux'
 
 import { fetchInfo } from './../actions/'
 
+import img from './../../theme/images/bg.jpeg'
+
 class Home extends Component {
 
   componentWillMount() {
