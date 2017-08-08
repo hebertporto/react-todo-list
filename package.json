@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "yarn run clean && webpack",
+    "build": "yarn run clean && SET NODE_ENV=production && webpack",
     "dev": "webpack-dev-server --progress --colors --inline --hot"
   },
   "repository": "https://github.com/hebertporto/react-todo-list.git",

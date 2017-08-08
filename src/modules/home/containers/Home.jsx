@@ -15,9 +15,17 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <h1> Component Home Redux</h1>
-        <h1>{this.props.home.info}</h1>
+      <div className="tasksWrapper">
+        <div className="tasksHeader">
+           Component Home Redux
+        </div>
+        <div className="tasksFilter">
+          Filter
+        </div>
+        <div className="tasksBody">
+          Body
+          {this.props.home.info}
+        </div>
       </div>
     )
   }

@@ -1,3 +1,5 @@
+const env = process.env.NODE_ENV
+console.log('env', env);
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -15,8 +17,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js',
-    publicPath: 'dist/',
+    filename: '[name].[hash].js',
   },
   module: {
     rules: [
@@ -40,8 +41,14 @@ module.exports = {
         },
       },
       {
-        use: ['style-loader', 'css-loader'],
         test: /\.css$/,
+        use: env === 'production'
+          ? ExtractTextPlugin.extract({
+            fallbackLoader: 'style-loader',
+            loader: ['css-loader', 'sass-loader'],
+            publicPath: '/dist',
+          })
+          : ['style-loader', 'css-loader'],
       },
       {
         test: /\.(jpeg|jpg|png|gif|svg)$/,
@@ -54,7 +61,7 @@ module.exports = {
             },
           },
           'image-webpack-loader',
-        ]
+        ],
       },
     ],
   },
@@ -68,7 +75,11 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
     }),
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin({
+      filename: 'app.css',
+      disable: false,
+      allChunks: true,
+    }),
   ],
   resolve: {
     modules: ['node_modules'],

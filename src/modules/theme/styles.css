@@ -1,3 +1,65 @@
+* {
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html{
+  height: 100%;
+}
+
 body {
-  background-color: red;
+  width: 100%;
+  min-height:100%;
+  background:
+    url('./images/bg.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.tasksWrapper {
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tasksHeader {
+  display: flex;
+  flex: 1 1 5%;
+  min-height: 2.5em;
+  max-height: 2em;
+  width: 70%;
+  font-size: 3.2em;
+  color: #F4B350;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  align-content: center;
+  padding:20px 0px 20px 0px;
+  margin-bottom: 6px;
+  margin-top: 7%;
+  background-color: rgba(0,0,0,0.5);
+  text-shadow: 3px 3px 10px #000;
+  display: block;
+  align-items: center;
+  justify-content: center;
+}
+
+.tasksFilter {
+  display: flex;
+  flex: 1 1 85%;
+}
+
+.tasksBody {
+  padding-top: 24px;
+  display: flex;
+  flex: 1 1 85%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  overflow: auto;
 }
