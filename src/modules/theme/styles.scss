@@ -38,6 +38,30 @@ html, body {
   background-repeat:   no-repeat;
   // text-shadow: 3px 3px 10px #000;
 }
+.filter-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  color: #BE9136;
+  background: #F2C04D;
+}
+
+.white-text {
+  color: white;
+  .selected {
+    font-weight: bold;
+  }
+}
+
+.red-text {
+  color: red;
+  font-weight: bold;
+}
+
+.task-box {
+  display: flex;
+  padding: 10px 10px;
+}
 
 .tasksFilter {
   background: yellow;

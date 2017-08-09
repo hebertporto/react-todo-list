@@ -9,6 +9,7 @@ import AvatarImage from './../../shared/components/AvatarImage'
 import Button from './../../shared/components/Button'
 import Filter from './../components/Filter'
 import OptionsFilter from './../components/OptionsFilter'
+import TaskList from './../components/TaskList'
 
 class Home extends Component {
 
