@@ -29,20 +29,21 @@ body {
 }
 
 .tasksHeader {
+  width: 50%;
   display: flex;
   flex: 1 1 5%;
   min-height: 2.5em;
   max-height: 2em;
-  width: 70%;
   font-size: 3.2em;
   color: #F4B350;
   font-family: 'Permanent Marker', cursive;
   text-align: center;
   align-content: center;
   padding:20px 0px 20px 0px;
-  margin-bottom: 6px;
   margin-top: 7%;
-  background-color: rgba(0,0,0,0.5);
+  background:
+  linear-gradient(95deg, rgba(0,0,0,0.1), rgba(0, 0, 0, 0.5)),
+    url('./images/bg.jpeg');
   text-shadow: 3px 3px 10px #000;
   display: block;
   align-items: center;
@@ -50,14 +51,18 @@ body {
 }
 
 .tasksFilter {
+  width: 50%;
   display: flex;
-  flex: 1 1 85%;
+  flex: 1 1 5%;
+  background: yellow;
 }
 
 .tasksBody {
+  width: 50%;
+  background: red;
   padding-top: 24px;
   display: flex;
-  flex: 1 1 85%;
+  flex: 1 1 50%;
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
