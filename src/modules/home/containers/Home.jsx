@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { fetchInfo } from './../actions/'
 
-import img from './../../theme/images/bg.jpeg'
+import AvatarImage from './../../shared/components/AvatarImage'
 
 class Home extends Component {
 
@@ -15,16 +15,10 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="tasksWrapper">
+      <div>
         <div className="tasksHeader">
-           Component Home Redux
-        </div>
-        <div className="tasksFilter">
-          Filter
-        </div>
-        <div className="tasksBody">
-          Body
-          {this.props.home.info}
+          <AvatarImage />
+           Home Redux
         </div>
       </div>
     )

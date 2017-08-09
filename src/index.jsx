@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
-import './modules/theme/styles.css'
+import './modules/theme/styles.scss'
 
 import reducers from './store/reducers'
 

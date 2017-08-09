@@ -1,0 +1,47 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background:
+    url('./images/bg.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.tasksHeader {
+  display: flex;
+  width: 300px;
+  min-height: 1.5em;
+  max-height: 2em;
+  font-size: 3.2em;
+  color: #F4B350;
+  text-align: center;
+  align-content: center;
+  padding:20px 100px 20px 100px;
+  margin-top: 15%;
+  background:
+  linear-gradient(95deg, rgba(0,0,0,0.1), rgba(0, 0, 0, 0.5)),
+    url('./images/bg.jpeg');
+  text-shadow: 3px 3px 10px #000;
+}
+
+.imageAvatar {
+  width:100px;
+  height:80px;
+  border-radius:50%;
+  overflow:hidden;
+  background: red;
+  object-fit: fill;
+}
+.img {
+   height: 80px;
+   margin-left: -12px;
+}

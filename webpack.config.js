@@ -41,14 +41,14 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: env === 'production'
           ? ExtractTextPlugin.extract({
             fallbackLoader: 'style-loader',
             loader: ['css-loader', 'sass-loader'],
             publicPath: '/dist',
           })
-          : ['style-loader', 'css-loader'],
+          : ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(jpeg|jpg|png|gif|svg)$/,
@@ -83,6 +83,6 @@ module.exports = {
   ],
   resolve: {
     modules: ['node_modules'],
-    extensions: ['.js', '.json', '.jsx', '.css'],
+    extensions: ['.js', '.json', '.jsx', '.css', '.scss'],
   },
 }
