@@ -17,31 +17,49 @@ html, body {
 }
 
 .tasksHeader {
+  box-shadow: 10px 10px 149px 0px rgba(0,0,0,0.35);
   display: flex;
-  width: 300px;
-  min-height: 1.5em;
-  max-height: 2em;
-  font-size: 3.2em;
+  align-items: center;
+  flex-direction: row;
+  width: 800px;
   color: #F4B350;
-  text-align: center;
-  align-content: center;
-  padding:20px 100px 20px 100px;
   margin-top: 15%;
+  padding: 20px 0 20px 0;
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+
+   & > div:nth-child(2) {
+    flex-grow: 2;
+   }
   background:
   linear-gradient(95deg, rgba(0,0,0,0.1), rgba(0, 0, 0, 0.5)),
     url('./images/bg.jpeg');
-  text-shadow: 3px 3px 10px #000;
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  // text-shadow: 3px 3px 10px #000;
+}
+
+.tasksFilter {
+  background: yellow;
+}
+.tasksBody {
+  background: red;
+}
+
+.buttonAddTask {
+  margin: 0 15px 0 15px;
 }
 
 .imageAvatar {
-  width:100px;
+  width:80px;
   height:80px;
   border-radius:50%;
   overflow:hidden;
   background: red;
   object-fit: fill;
+  margin: 0 15px 0 15px;
 }
 .img {
    height: 80px;
-   margin-left: -12px;
+   margin-left: -13px;
 }
