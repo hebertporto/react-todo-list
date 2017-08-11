@@ -30,6 +30,12 @@ class Home extends Component {
       { key: 2, title: 'Active' },
       { key: 3, title: 'Finished' },
     ]
+    const taskList = [
+      { key: 1, title: 'All' },
+      { key: 2, title: 'Active' },
+      { key: 3, title: 'Finished' },
+    ]
+
     return (
       <div>
         <div className="tasksHeader">
@@ -41,7 +47,7 @@ class Home extends Component {
           <OptionsFilter options={filterOptions} />
         </div>
         <div className="tasksBody">
-          <TaskList />
+          <TaskList tasks={taskList} />
         </div>
       </div>
     )
