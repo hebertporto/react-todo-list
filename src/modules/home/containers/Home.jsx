@@ -41,7 +41,7 @@ class Home extends Component {
           <OptionsFilter options={filterOptions} />
         </div>
         <div className="tasksBody">
-          body
+          <TaskList />
         </div>
       </div>
     )
