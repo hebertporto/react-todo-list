@@ -58,6 +58,19 @@ html, body {
   font-weight: bold;
 }
 
+.task-item {
+  min-height: 100px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  & > div {
+    flex-grow: 1;
+  }
+  & > div:nth-child(2) {
+    flex-grow: 2;
+   }
+}
+
 .task-box {
   display: flex;
   padding: 10px 10px;
@@ -67,6 +80,7 @@ html, body {
   background: yellow;
 }
 .tasksBody {
+  display: flex;
   background: red;
 }
 
