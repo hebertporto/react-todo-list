@@ -6,11 +6,11 @@ const OptionsFilter = (props) => {
       <div className="filter-options">
         Filter:
         {props.options.map((item) => {
-          return <span key={item.key} className={item.title === 'All' ? 'white-text selected' : ''}> {item.title} </span>
+          return <span key={item.key} className={item.title === 'All' ? 'text-white' : ''}> {item.title} </span>
         })}
       </div>
-      <div className="filter-notices">
-        You have <span className="red-text">2</span> task to finish today
+      <div className="filter-notices text-white">
+        You have <span className="text-red">2</span> task to finish today
       </div>
     </div>
   )

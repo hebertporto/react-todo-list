@@ -5,10 +5,19 @@ const TaskList = (props) => {
     <div className="task-list">
       {props.tasks.map((item) => {
         return (
-          <div className="task-item">
-            <div style={{ backgroundColor: 'blue', textAlign: 'center' }}>x</div>
-            <div style={{ backgroundColor: 'yellow' }}>Lasd Lasdsad aL asd ada LAasd asd a das das da </div>
-            <div style={{ backgroundColor: 'green', textAlign: 'center' }}> 2 days </div>
+          <div className="task-item" key={item.key}>
+            <div className="task-item-checked">
+              <span className="centralize">X</span>
+            </div>
+            <div className="task-item-body">
+                Lasd Lasdsad aL asd ada LAasd asd a  Lasdsad aL asd ada LAasd asd a das das da  Las
+                asd ada LAasd asd a das das da  Lasd ada LAasd asd a das das da  Lasd Lasdsad aL as
+            </div>
+            <div className="task-item-date">
+              <span className="centralize">
+                2 days
+              </span>
+            </div>
           </div>
         )
       })}

@@ -36,6 +36,9 @@ body {
 .header-menu {
   flex: 3;
   order: 2;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 
 .header-add {
@@ -44,22 +47,23 @@ body {
   display: flex;
 }
 
-.header-add-button {
+.centralize {
   margin: auto;
 }
 
 .filter {
   display: flex;
+  padding: 10px 10px;
+  color: #BE9136;
+  background: #F2C04D;
 }
 .filter-options {
   flex: 2;
   order: 1;
-  background-color: yellow;
 }
 .filter-notices {
   flex:  1;
   order: 2;
-  background-color: plum;
 }
 .task-list {
   display: flex;
@@ -67,21 +71,33 @@ body {
 }
 .task-item {
   flex: 1;
-  background-color: firebrick;
-  border: 1px solid black;
+  border-bottom: 1px solid #B4BFBA;
   display: flex;
+  min-height: 80px;
+  background-color: #F0FFF9;
+  transition: all 0.3s ease-in-out;
 }
+
+.task-item:hover {
+  transform: scale(1.05);
+	box-shadow: 0px 10px 20px #D0DBD7;
+}
+
 .task-item-checked {
-  flex: 1;
-  background-color: palevioletred;
+  flex: 0.5;
+  display: flex;
 }
 .task-item-body {
   flex: 3;
-  background-color: goldenrod;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+
 }
+
 .task-item-date {
   flex: 1;
-  background-color: rosybrown;
+  display: flex;
 }
 .img {
   width:80px;
@@ -90,4 +106,12 @@ body {
   overflow:hidden;
   object-fit: fill;
   margin: 0 15px 0 15px;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-red {
+  color: red;
 }
