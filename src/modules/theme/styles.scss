@@ -5,112 +5,89 @@ html, body {
   border: 0;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
+body {
+  font-family: Helvetica, sans-serif;
   background:
     url('./images/bg.jpeg');
   background-attachment: fixed;
   background-size: cover;
+  overflow: hidden;
+}
+#root {
+  max-width: 800px;
+  margin: 80px auto 0 auto;
 }
 
-.tasksHeader {
-  box-shadow: 10px 10px 149px 0px rgba(0,0,0,0.35);
+.header {
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  width: 800px;
-  color: #F4B350;
-  margin-top: 15%;
-  padding: 20px 0 20px 0;
-  border-top-right-radius: 0.5em;
-  border-top-left-radius: 0.5em;
-
-   & > div:nth-child(2) {
-    flex-grow: 2;
-   }
   background:
   linear-gradient(95deg, rgba(0,0,0,0.1), rgba(0, 0, 0, 0.5)),
     url('./images/bg.jpeg');
-  background-size:     cover;                      /* <------ */
+  background-size:     cover;
   background-repeat:   no-repeat;
-  // text-shadow: 3px 3px 10px #000;
+  padding: 10px;
 }
-.filter-box {
+
+.header-avatar {
+  flex-basis: auto;
+  order: 1;
+}
+
+.header-menu {
+  flex: 3;
+  order: 2;
+}
+
+.header-add {
+  flex: 0.5;
+  order: 3;
   display: flex;
-  justify-content: space-between;
-  padding: 10px 10px;
-  color: #BE9136;
-  background: #F2C04D;
 }
 
-.white-text {
-  color: white;
-  .selected {
-    font-weight: bold;
-  }
+.header-add-button {
+  margin: auto;
 }
 
-.red-text {
-  color: red;
-  font-weight: bold;
-}
-.tasksBody {
+.filter {
   display: flex;
-  background: red;
 }
-
+.filter-options {
+  flex: 2;
+  order: 1;
+  background-color: yellow;
+}
+.filter-notices {
+  flex:  1;
+  order: 2;
+  background-color: plum;
+}
 .task-list {
-  flex: 0 0 100%;
   display: flex;
   flex-direction: column;
-  max-height: 350px;
 }
-
 .task-item {
-  min-height: 70px;
-	background-color: #FFFFFF;
+  flex: 1;
+  background-color: firebrick;
+  border: 1px solid black;
   display: flex;
-  border-bottom: 1px solid #D0DBD7;
-	transition: all 0.3s ease-in-out;
-  & > div {
-    flex-grow: 1;
-  }
-  & > div:nth-child(2) {
-    flex-grow: 2;
-   }
 }
-
-.task-item:hover {
-	transform: scale(1.15);
-	box-shadow: 0px 10px 20px #D0DBD7;//#A0A8A5;
-
+.task-item-checked {
+  flex: 1;
+  background-color: palevioletred;
 }
-.task-box {
-  display: flex;
-  padding: 10px 10px;
+.task-item-body {
+  flex: 3;
+  background-color: goldenrod;
 }
-
-.tasksFilter {
-  background: yellow;
+.task-item-date {
+  flex: 1;
+  background-color: rosybrown;
 }
-
-.buttonAddTask {
-  margin: 0 15px 0 15px;
-}
-
-.imageAvatar {
+.img {
   width:80px;
   height:80px;
   border-radius:50%;
   overflow:hidden;
-  background: red;
   object-fit: fill;
   margin: 0 15px 0 15px;
-}
-.img {
-   height: 80px;
-   margin-left: -13px;
 }

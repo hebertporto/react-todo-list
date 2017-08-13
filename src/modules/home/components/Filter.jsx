@@ -2,7 +2,7 @@ import React from 'react'
 
 const Filter = (props) => {
   return (
-    <div>
+    <div className={props.class}>
       {props.options.map((item) => {
         return <span key={item.key}> {item.title} ({item.count}) </span>
       })}

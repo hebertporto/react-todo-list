@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Button = ({ children }) => {
+const Button = (props) => {
   return (
-    <div className="buttonAddTask">
-      B
+    <div className={props.class}>
+      <span className="header-add-button"> B </span>
     </div>
   )
 }

@@ -42,17 +42,13 @@ class Home extends Component {
 
     return (
       <div>
-        <div className="tasksHeader">
-          <AvatarImage />
-          <Filter options={header} />
-          <Button />
+        <div className="header">
+          <AvatarImage class="header-avatar" />
+          <Filter options={header} class="header-menu" />
+          <Button class="header-add" />
         </div>
-        <div className="tasksFilter">
-          <OptionsFilter options={filterOptions} />
-        </div>
-        <div className="tasksBody">
-          <TaskList tasks={taskList} />
-        </div>
+        <OptionsFilter options={filterOptions} />
+        <TaskList tasks={taskList} />
       </div>
     )
   }

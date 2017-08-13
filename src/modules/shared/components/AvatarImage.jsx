@@ -1,9 +1,9 @@
 import React from 'react'
 import avatar from './../../theme/images/avatar.png'
 
-const AvatarImage = ({ children }) => {
+const AvatarImage = (props) => {
   return (
-    <div className="imageAvatar">
+    <div className={props.class}>
       <img src={avatar} alt={'avatar'} className="img" />
     </div>
   )
