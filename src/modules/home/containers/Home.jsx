@@ -5,11 +5,10 @@ import { connect } from 'react-redux'
 
 import { fetchInfo } from './../actions/'
 
-import AvatarImage from './../../shared/components/AvatarImage'
-import Button from './../../shared/components/Button'
-import Filter from './../components/Filter'
+
 import OptionsFilter from './../components/OptionsFilter'
 import TaskList from './../components/TaskList'
+import Header from './../components/Header'
 
 class Home extends Component {
 
@@ -42,11 +41,7 @@ class Home extends Component {
 
     return (
       <div>
-        <div className="header">
-          <AvatarImage class="header-avatar" />
-          <Filter options={header} class="header-menu" />
-          <Button class="header-add" />
-        </div>
+        <Header class="header" options={header} />
         <OptionsFilter options={filterOptions} />
         <TaskList tasks={taskList} />
       </div>
