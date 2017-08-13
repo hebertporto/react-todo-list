@@ -4,7 +4,11 @@ const Filter = (props) => {
   return (
     <div className={props.class}>
       {props.options.map((item) => {
-        return <span key={item.key}> {item.title} ({item.count}) </span>
+        return (
+          <span style={{ paddingRight: 10 }} key={item.key}>
+            {item.title} ({item.count})
+          </span>
+        )
       })}
     </div>
   )
