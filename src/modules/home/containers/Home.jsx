@@ -34,6 +34,10 @@ class Home extends Component {
       { key: 1, title: 'All' },
       { key: 2, title: 'Active' },
       { key: 3, title: 'Finished' },
+      { key: 4, title: 'Finished' },
+      { key: 5, title: 'Finished' },
+      { key: 6, title: 'Finished' },
+      { key: 7, title: 'Finished' },
     ]
 
     return (

@@ -57,12 +57,24 @@ html, body {
   color: red;
   font-weight: bold;
 }
+.tasksBody {
+  display: flex;
+  background: red;
+}
+
+.task-list {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  max-height: 350px;
+}
 
 .task-item {
-  min-height: 100px;
-  background-color: white;
+  min-height: 70px;
+	background-color: #FFFFFF;
   display: flex;
-  justify-content: space-between;
+  border-bottom: 1px solid #D0DBD7;
+	transition: all 0.3s ease-in-out;
   & > div {
     flex-grow: 1;
   }
@@ -71,6 +83,11 @@ html, body {
    }
 }
 
+.task-item:hover {
+	transform: scale(1.15);
+	box-shadow: 0px 10px 20px #D0DBD7;//#A0A8A5;
+
+}
 .task-box {
   display: flex;
   padding: 10px 10px;
@@ -78,10 +95,6 @@ html, body {
 
 .tasksFilter {
   background: yellow;
-}
-.tasksBody {
-  display: flex;
-  background: red;
 }
 
 .buttonAddTask {
