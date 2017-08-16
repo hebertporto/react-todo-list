@@ -37,6 +37,7 @@ class Home extends Component {
       { key: 5, title: 'Finished' },
       { key: 6, title: 'Finished' },
       { key: 7, title: 'Finished' },
+      { key: 7, title: 'Finished' },
     ]
 
     return (
